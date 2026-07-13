@@ -1,0 +1,120 @@
+/* SKEL-Mirror Pro App Styles */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0d9488;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #14b8a6;
+}
+
+/* Canvas container */
+#root canvas {
+  display: block;
+}
+
+/* Video mirroring for selfie mode */
+video {
+  transform: scaleX(-1);
+}
+
+/* Smooth transitions for UI */
+.transition-all {
+  transition: all 0.25s ease;
+}
+
+/* Glass panel effect */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 41, 59, 0.7);
+}
+
+/* Slider customization */
+[data-slot="slider-track"] {
+  background: rgba(30, 41, 59, 0.5) !important;
+}
+
+[data-slot="slider-range"] {
+  background: #0d9488 !important;
+}
+
+[data-slot="slider-thumb"] {
+  background: #14b8a6 !important;
+  border: 2px solid #0d9488 !important;
+}
+
+/* Switch customization */
+[data-state="checked"] {
+  background-color: #0d9488 !important;
+}
+
+/* Badge customization */
+.badge-teal {
+  background-color: rgba(13, 148, 136, 0.15);
+  color: #14b8a6;
+  border-color: rgba(13, 148, 136, 0.3);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card-hover:hover {
+  border-color: rgba(13, 148, 136, 0.4);
+  box-shadow: 0 0 20px rgba(13, 148, 136, 0.05);
+}
+
+/* Status indicator pulse */
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.status-active {
+  animation: status-pulse 2s ease-in-out infinite;
+}
+
+/* Input focus */
+input:focus {
+  outline: none;
+  border-color: #0d9488;
+  box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .dashboard-panel {
+    max-width: 92vw;
+    left: 4vw;
+    top: 8px;
+    padding: 14px;
+  }
+}
+
+/* Loading spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Three.js canvas sizing */
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
